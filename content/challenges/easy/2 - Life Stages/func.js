@@ -9,11 +9,11 @@
 module.exports = (age) => {
     if (age <= 2) {
         return 'Baby';
-    } else if ((age > 2) && (age < 13)) {
+    } else if (age > 2 && age < 13) {
         return 'Kid';
-    } else if ((age >= 13) && (age <= 19)) {
+    } else if (age >= 13 && age <= 19) {
         return 'Teen';
-    } else if ((age > 19) && (age <= 30)) {
+    } else if (age > 19 && age <= 30) {
         return 'Young Adult';
     } else {
         return 'Dead';

@@ -2,6 +2,7 @@
 // time is in military time 0-24
 module.exports = (hour) => {
     if (hour < 12) {
-    return "Before Noon";
+        return true;
     }
+    return false;
 }
