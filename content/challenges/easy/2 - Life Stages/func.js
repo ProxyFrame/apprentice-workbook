@@ -17,5 +17,5 @@ module.exports = (age) => {
         return 'Young Adult';
     } else {
         return 'Dead';
-}
+    }
 }

@@ -5,47 +5,45 @@
 // Aces count either as 1 or 11 - play conservatively, so that if giving an ace a value of 11 causes you to lose and 1 allows you to win, then go with 1.
 
 module.exports = (cards) => {
-let hand = 0;
-let acePresent = false; 
-for (let index = 0; index < cards.length; index++) {
-    let hit = cards[index];
-switch (hit) {
-    case "A":
-        acePresent = true;
-        hand += 1;
-        break;
-    case 2:
-        hand += 2;
-        break;
-    case 3:
-        hand += 3;
-        break;
-    case 4:
-        hand += 4;
-        break;
-    case 5:
-        hand += 5;
-        break;
-    case 6:
-        hand += 6;
-        break;
-    case 7:
-        hand += 7;
-        break;
-    case 8:
-        hand += 8;
-        break;
-    case 9:
-        hand += 9;
-        break;
-    case 10:
-    case "J":
-    case "Q":
-    case "K":
-        hand += 10;
-}
-}
-console.log(hand)
-console.log(acePresent)
-return hand > 21;
+    let hand = 0;
+    let acePresent = false;
+    for (let index = 0; index < cards.length; index++) {
+        let hit = cards[index];
+        switch (hit) {
+            case "A":
+                acePresent = true;
+                hand += 1;
+                break;
+            case 2:
+                hand += 2;
+                break;
+            case 3:
+                hand += 3;
+                break;
+            case 4:
+                hand += 4;
+                break;
+            case 5:
+                hand += 5;
+                break;
+            case 6:
+                hand += 6;
+                break;
+            case 7:
+                hand += 7;
+                break;
+            case 8:
+                hand += 8;
+                break;
+            case 9:
+                hand += 9;
+                break;
+            case 10:
+            case "J":
+            case "Q":
+            case "K":
+                hand += 10;
+        }
+    }
+    return hand > 21;
 };

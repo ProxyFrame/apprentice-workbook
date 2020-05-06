@@ -5,8 +5,5 @@
 
 module.exports = (word) => {
     let lastLetter = word[word.length - 1];
-    if (lastLetter == "s") {
-        return true;
-    }
-    return false;
+    return lastLetter == 's'
 };
