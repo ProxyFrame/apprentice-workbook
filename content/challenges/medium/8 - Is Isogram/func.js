@@ -6,3 +6,5 @@
 //   - All test cases contain valid one word strings.
 module.exports = (str) => {
 }
+
+// loop across a word and determine if a letter appears more than once.

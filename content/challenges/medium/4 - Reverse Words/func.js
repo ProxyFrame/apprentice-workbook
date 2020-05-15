@@ -4,4 +4,11 @@
 // Notes:
 //   - You can expect a valid string to be provided for each test case.
 module.exports = (str) => {
+    var reversed = "";
+    for (var i = str.length - 1; i>= 0; i--) {
+        reversed  += str[i];
+    }
+    return reversed;
 }
+
+// needs an if clause for only 5 or more letter words

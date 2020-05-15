@@ -1,4 +1,4 @@
-// Create a function that takes an array of card numbers and checks if the hand of their value exceeds 21. If the hand exceeds 21, return true and if the hand is under or equal to 21, return false. Values of the cards are as follows:
+// Create a function that takes an array of card numbers and checks if the hand of their value exceeds 21. If the hand exceeds 21, true and if the hand is under or equal to 21, false. Values of the cards are as follows:
 
 // 2-10 are their value.
 // J-K (face cards) count as 10.
@@ -12,7 +12,7 @@ module.exports = (cards) => {
         switch (hit) {
             case "A":
                 acePresent = true;
-                hand += 1;
+                hand += 11;
                 break;
             case 2:
                 hand += 2;
@@ -44,6 +44,9 @@ module.exports = (cards) => {
             case "K":
                 hand += 10;
         }
+        if (hand > 21 && acePresent == true) {
+            hand - 10;
+        }
+        return hand > 21;
     }
-    return hand > 21;
 };

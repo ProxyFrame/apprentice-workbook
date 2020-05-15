@@ -4,3 +4,5 @@
 //   - You can expect a valid string for each test case.
 module.exports = (str) => {
 }
+
+// The very first letter and every letter following a space are changed to uppercase

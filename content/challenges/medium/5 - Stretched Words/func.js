@@ -4,3 +4,5 @@
 
 module.exports = (word) => {
 }
+
+// if a letter is the same as the letter before it, delete it

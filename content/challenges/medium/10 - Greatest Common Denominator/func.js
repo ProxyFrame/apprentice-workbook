@@ -4,3 +4,5 @@
 //   - The GCD is the largest factor that divides both numbers.
 module.exports = (int1, int2) => {
 }
+
+// largest shared value where int%num = 0
