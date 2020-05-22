@@ -3,7 +3,7 @@
 //   - The array of numbers will be unsorted (not in order).
 //   - Only one number will be missing.
 module.exports = (arr) => {
-    var total = 0;
+    var total = [];
     for (var i = 0; i < arr.length; i++) {
         total += arr[i];
     }

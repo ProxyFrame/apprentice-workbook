@@ -4,11 +4,15 @@
 // Notes:
 //   - You can expect a valid string to be provided for each test case.
 module.exports = (str) => {
-    var reversed = "";
-    for (var i = str.length - 1; i>= 0; i--) {
-        reversed  += str[i];
+    let strArray = str.split(' ');
+    let tempWordArray = [];
+    let wordReverse = [];
+    for (let x = 0; x <= strArray.length - 1; x++) {
+        if (strArray[x].length <= 4) {
+            return tempWordArray.push(strArray[x]);
+        }
     }
-    return reversed;
+    for (let i = strArray.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
 }
-
-// needs an if clause for only 5 or more letter words

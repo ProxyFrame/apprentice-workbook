@@ -3,14 +3,15 @@
 module.exports = (str) => {
     let correction = "";
     for (let i = 0; i < str.length; i++) {
-        if (str[i] !== "!" && str[i] !== "@" && str[i] !== "#" && str[i] !== "$" && str[i] !== "%" && str[i] !== "." && str[i] !== "&" && str[i] !== "(" && str[i] !== ")") {
-            correction += str[i];
+        const curChar = str[i];
+        if (curChar !== "!" && curChar !== "@" && curChar !== "#" && curChar !== "$" && curChar !== "%" && curChar !== "." && curChar !== "&" && curChar !== "(" && curChar !== ")") {
+            correction += curChar;
         }
     }
     return correction;
 }
 
-
+        // 
         // switch (str[i]) {
         //     case "!":
         //     case "@":
@@ -22,7 +23,7 @@ module.exports = (str) => {
         //     case "(":
         //     case ")":
         //     case ".":
-        //         return correction = str - str[i];
+        //         break
         //     default:
         //         return correction += str[i];
         // }
