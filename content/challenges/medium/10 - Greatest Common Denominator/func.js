@@ -5,14 +5,14 @@
 module.exports = (int1, int2) => {
     let denom = 1;
     for (let i = 1; i <= int1; i++) {
-        if (int1%i = 0) {
+        if (int1 % i = 0) {
             denom = i;
         }
     }
     for (let i = 1; i <= int2; i++) {
-        if (int2%i = 0) {
+        if (int2 % i = 0) {
             denom = i;
-}
+        }
 
 // largest shared value where int%num = 0
 // have loop put divisible numbers in an array
