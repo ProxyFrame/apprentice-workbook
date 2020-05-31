@@ -3,6 +3,14 @@
 // Notes: 
 //   - You can expect a valid string for each test case.
 module.exports = (str) => {
-}
+    let wordArray = str.split(" ");
+    let newSent = "";
+    let i = 0;
+    while(i < wordArray.length) {
+        newSent += wordArray[i];
+        i++
+    }
+    // while i < wordArray.length; i++ 
 
-// The very first letter and every letter following a space are changed to uppercase
+return newSent
+}

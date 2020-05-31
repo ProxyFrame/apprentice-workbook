@@ -3,5 +3,6 @@
 // Notes: 
 //   - Single-element arrays count as (trivially) having identical elements.
 module.exports = (arr) => {
-
+    for (let i = 0; i < arr.length; i++) {
+    }
 }

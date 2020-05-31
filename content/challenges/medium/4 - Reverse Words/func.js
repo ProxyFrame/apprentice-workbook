@@ -4,15 +4,38 @@
 // Notes:
 //   - You can expect a valid string to be provided for each test case.
 module.exports = (str) => {
-    let strArray = str.split(' ');
-    let tempWordArray = [];
-    let wordReverse = [];
-    for (let x = 0; x <= strArray.length - 1; x++) {
-        if (strArray[x].length <= 4) {
-            return tempWordArray.push(strArray[x]);
+    let strArr = str.split(" ");
+    let finalStr = "";
+    for (i = 0; i < strArr.length; i++) {
+        let tempWord = "";
+        let word = strArr[i];
+        if (word.length >= 5) {
+            for (x = word.length - 1; x >= 0; x--) {
+                let letter = word[x];
+                tempWord += letter;
+            }
+            finalStr += (" " + tempWord);
+        } else {
+            finalStr += (" " + word);
         }
     }
-    for (let i = strArray.length - 1; i >= 0; i--) {
-        reversed += str[i];
-    }
+    return finalStr.substring(1)
 }
+
+
+//     let strArray = str.split(' ');
+//     let finalStr = "";
+//     for (let i = 0; i < strArray.length; i++) {
+//         if (strArray[i].length < 5) {
+//             finalStr += (" " + strArray[i]);
+//         } else {
+//             let newWord = strArray[i];
+//             let wordReverse = "";
+//             for (let x = newWord.length - 1; x >= 0; x--) {
+//                 wordReverse += newWord[x];
+//             }
+//             finalStr += (" " + wordReverse);
+//         }
+//     }
+//     return finalStr;
+// }

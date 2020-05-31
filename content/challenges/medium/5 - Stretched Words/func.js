@@ -12,5 +12,3 @@ module.exports = (word) => {
     }
     return newWord
 }
-
-// if a letter is the same as the letter before it, dont add it from array
