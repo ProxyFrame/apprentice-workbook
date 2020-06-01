@@ -5,12 +5,9 @@
 module.exports = (str) => {
     let wordArray = str.split(" ");
     let newSent = "";
-    let i = 0;
-    while(i < wordArray.length) {
-        newSent += wordArray[i];
-        i++
+    for (i = 0; i < wordArray.length; i++) {
+        let capital = wordArray[i].toUpperCase();
+        wordArray[i] = capital.substring(0,1) + wordArray[i].substring(1);
     }
-    // while i < wordArray.length; i++ 
-
-return newSent
+    return wordArray.join(" ")
 }

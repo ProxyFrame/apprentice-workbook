@@ -5,15 +5,32 @@
 //   - Ignore letter case (should not be case sensitive).
 //   - All test cases contain valid one word strings.
 module.exports = (str) => {
-    for (let i = str.length - 1; i > 0; i++) {
-        for (let n = 0; n < str.length - 1; n++) {
-            if (str[i] == str[n]) {
+    str = str.toLowerCase();
+    for (let initial = 0; initial < str.length; initial++) {
+        for (let letComp = initial + 1; letComp < str.length; letComp++) {
+            if (str[initial] == str[letComp]) {
                 return false;
             }
-            return true;
         }
     }
+    return true;
 }
+
+
+//     let strArr = str.split("");
+//     let isogram = true;
+//     let isoCheck = strArr.shift();
+//     while(strArr != []) {
+//         for (i = 0; i < strArr.length; i++) {
+//             if (isoCheck == strArr[i]) {
+//                 isogram = false;
+//                 break;
+//             }
+//         }
+//         isoCheck = strArr.shift();
+//     }
+// return isogram
+// }
 
 
 //     let test = true;
