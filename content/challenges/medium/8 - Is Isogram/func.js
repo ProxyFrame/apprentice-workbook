@@ -6,33 +6,36 @@
 //   - All test cases contain valid one word strings.
 module.exports = (str) => {
     str = str.toLowerCase();
-    for (let initial = 0; initial < str.length; initial++) {
-        for (let letComp = initial + 1; letComp < str.length; letComp++) {
-            if (str[initial] == str[letComp]) {
-                return false;
+    let strArr = str.split("");
+    let isogram = true;
+    let isoCheck = strArr.shift();
+    while (strArr.length > 0) {
+        for (i = 0; i < strArr.length; i++) {
+            if (isoCheck == strArr[i]) {
+                isogram = false;
+                break;
             }
         }
+        if (isogram) {
+            isoCheck = strArr.shift();
+        } else {
+            break;
+        }
     }
-    return true;
+    return isogram
 }
 
 
-//     let strArr = str.split("");
-//     let isogram = true;
-//     let isoCheck = strArr.shift();
-//     while(strArr != []) {
-//         for (i = 0; i < strArr.length; i++) {
-//             if (isoCheck == strArr[i]) {
-//                 isogram = false;
-//                 break;
+//     str = str.toLowerCase();
+//     for (let initial = 0; initial < str.length; initial++) {
+//         for (let letComp = initial + 1; letComp < str.length; letComp++) {
+//             if (str[initial] == str[letComp]) {
+//                 return false;
 //             }
 //         }
-//         isoCheck = strArr.shift();
 //     }
-// return isogram
+//     return true;
 // }
-
-
 //     let test = true;
 //     let altStr = str.toLowerCase();
 //     let letterTally = {};

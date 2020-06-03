@@ -5,16 +5,17 @@
 module.exports = (arr) => {
     let arrTally = 0;
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length == 1) {
+        let currArr = arr[i];
+        if (currArr.length == 1) {
             arrTally++;
         }
-        for (sa = 0; sa < arr[i].length; sa++) {
-            if (arr[i][sa] == arr[i][sa + 1]) {
+        if (currArr.length > 1) {
+            if (currArr[0] == currArr[currArr.length - 1]) {
                 arrTally++
             }
         }
     }
-    return arrTally
+return arrTally
 }
 
 // dump each individual array values into a temp array and check each
