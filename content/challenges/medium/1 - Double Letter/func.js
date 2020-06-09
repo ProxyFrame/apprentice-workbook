@@ -2,7 +2,7 @@
 module.exports = (word) => {
     for (let i = 0; i < word.length; i++) {
         const curLetter = word[i];
-        const lastLetter = word[i-1];
+        const lastLetter = word[i - 1];
         if (curLetter === lastLetter) {
             return true;
         }
