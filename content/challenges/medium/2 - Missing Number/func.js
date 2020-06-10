@@ -3,17 +3,21 @@
 //   - The array of numbers will be unsorted (not in order).
 //   - Only one number will be missing.
 module.exports = (arr) => {
-    let newArray = [];
-    for (let organizer = 1; organizer <= 10; organizer++) {
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] == organizer) {
-                newArray.push(organizer);
-            }
-        }
-    }
-    for (let n = 1; n <= 10; n++) {
-        if (newArray[n - 1] != n) {
-            return n;
-        }
-    }
+    const reducer = (accumulator, currentValue) => accumulator - currentValue;
+    return arr.reduce(reducer, 55);
 }
+
+//     let newArray = [];
+//     for (let organizer = 1; organizer <= 10; organizer++) {
+//         for (let i = 0; i < arr.length; i++) {
+//             if (arr[i] == organizer) {
+//                 newArray.push(organizer);
+//             }
+//         }
+//     }
+//     for (let n = 1; n <= 10; n++) {
+//         if (newArray[n - 1] != n) {
+//             return n;
+//         }
+//     }
+// }
