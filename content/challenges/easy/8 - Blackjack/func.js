@@ -7,34 +7,8 @@
 module.exports = (cards) => {
     let hand = 0;
     let acePresent = false;
-    for (let index = 0; index < cards.length - 1; index++) {
-        let hit = cards[index];
+    cards.forEach(hit => {
         switch (hit) {
-            case 2:
-                hand += 2;
-                break;
-            case 3:
-                hand += 3;
-                break;
-            case 4:
-                hand += 4;
-                break;
-            case 5:
-                hand += 5;
-                break;
-            case 6:
-                hand += 6;
-                break;
-            case 7:
-                hand += 7;
-                break;
-            case 8:
-                hand += 8;
-                break;
-            case 9:
-                hand += 9;
-                break;
-            case 10:
             case "J":
             case "Q":
             case "K":
@@ -43,12 +17,15 @@ module.exports = (cards) => {
             case "A":
                 acePresent = true;
                 hand += 11;
-                if (hand > 21 && acePresent == true) {
-                    hand - 10;
-                    acePresent = false;
-                    break;
-                }
+                break;
+            default:
+                hand += hit;
+                break;
         }
+    })
+    console.log(hand);
+    if (hand > 21 && acePresent == true) {
+        hand -= 10;
     }
-        return hand > 21;
-    };
+    return hand > 21;
+};

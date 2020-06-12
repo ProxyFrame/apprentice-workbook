@@ -2,21 +2,15 @@
 // Notes: 
 // An empty string counts as a palindrome.
 module.exports = (str) => {
-
-  let strArray = str.split('');
-  function palinCheck(strArray) {
-    let index = strArray.length;
-    if (index <= 1) {
-      return strArray;
-    }
-    else if (strArray[0] === strArray[index - 1]) {
-      strArray.pop();
-      strArray.shift();
-      return strArray;
-    }
-    return palinCheck(strArray);
+  return palinCheck(str.split(''))
+}
+function palinCheck(strArray) {
+  let length = strArray.length;
+  if (length <= 1) {
+    return true;
   }
-  return (strArray.length <= 1)
-  // put your code here
-  // don't touch anything else
+  else if (strArray[0] === strArray[length - 1]) {
+    return palinCheck(strArray.slice(1, length - 1));
+  }
+  return false;
 }
