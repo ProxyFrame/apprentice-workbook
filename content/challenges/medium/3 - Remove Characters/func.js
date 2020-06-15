@@ -11,6 +11,8 @@ module.exports = (str) => {
     return correction;
 }
 
+// ["!", "@", ...]
+
         // 
         // switch (str[i]) {
         //     case "!":

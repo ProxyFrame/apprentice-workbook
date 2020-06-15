@@ -2,10 +2,7 @@
 // Each even-odd transformation:
 //   1. Adds two (+2) to each odd integer.
 //   2. Subtracts two (-2) to each even integer.
-module.exports = (arr, n) => {
-    let newArray = arr.map(int => (int % 2 == 0 ? int - 2*n : int + 2*n));
-    return newArray;
-}
+module.exports = (arr, n) => arr.map(int => (int % 2 == 0 ? int - 2 * n : int + 2 * n));
 
 //     let newArray = [];
 //     for (let i = 0; i < arr.length; i++) {

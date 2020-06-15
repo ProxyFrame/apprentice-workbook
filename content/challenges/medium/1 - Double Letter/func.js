@@ -9,3 +9,4 @@ module.exports = (word) => {
     }
     return false
 }
+

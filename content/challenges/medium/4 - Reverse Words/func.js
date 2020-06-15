@@ -4,38 +4,29 @@
 // Notes:
 //   - You can expect a valid string to be provided for each test case.
 module.exports = (str) => {
-    let strArr = str.split(" ");
-    let finalStr = "";
-    for (i = 0; i < strArr.length; i++) {
-        let tempWord = "";
-        let word = strArr[i];
-        if (word.length >= 5) {
-            for (x = word.length - 1; x >= 0; x--) {
-                let letter = word[x];
-                tempWord += letter;
-            }
-            finalStr += (" " + tempWord);
-        } else {
-            finalStr += (" " + word);
-        }
+    return str
+        .split(" ")
+        .map(currWord => {
+            (currWord.length < 5) ? currWord = currWord : currWord = currWord.split('').reverse().join('');
+            return currWord;
+        })
+        .join(" ");
     }
-    return finalStr.substring(1)
-}
 
-
-//     let strArray = str.split(' ');
+//     let strArr = str.split(" ");
 //     let finalStr = "";
-//     for (let i = 0; i < strArray.length; i++) {
-//         if (strArray[i].length < 5) {
-//             finalStr += (" " + strArray[i]);
-//         } else {
-//             let newWord = strArray[i];
-//             let wordReverse = "";
-//             for (let x = newWord.length - 1; x >= 0; x--) {
-//                 wordReverse += newWord[x];
+//     for (i = 0; i < strArr.length; i++) {
+//         let tempWord = "";
+//         let word = strArr[i];
+//         if (word.length >= 5) {
+//             for (x = word.length - 1; x >= 0; x--) {
+//                 let letter = word[x];
+//                 tempWord += letter;
 //             }
-//             finalStr += (" " + wordReverse);
+//             finalStr += (" " + tempWord);
+//         } else {
+//             finalStr += (" " + word);
 //         }
 //     }
-//     return finalStr;
+//     return finalStr.substring(1)
 // }
